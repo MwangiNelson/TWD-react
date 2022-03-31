@@ -3,14 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Navbar from './components/navBar';
+import Body from './components/body';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'font-awesome/css/font-awesome.css';
 import '@fortawesome/fontawesome-svg-core';
 import reportWebVitals from './reportWebVitals';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Navbar />
+    <Body />
   </React.StrictMode>,
   document.getElementById('root')
 );
