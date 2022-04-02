@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../navbar.css';
+import '../body.css';
 import { Button } from '@mui/material';
-import { HomeRounded, AccountCircleRounded, MenuSharp , SortSharp } from '@material-ui/icons';
+import { HomeRounded, AccountCircleRounded, MenuSharp, SortSharp } from '@material-ui/icons';
 
 
 class Navbar extends Component {
@@ -21,8 +21,8 @@ class Navbar extends Component {
             >
                 <div className="row justify-content-between nav p-0 body-head">
 
-                    <div className="col-sm p-2 logo-box w-50"  style={{marginLeft:'5px'}} >
-                        <img style={{ width: '10rem' , height:'5rem',objectFit:'cover'}} src="/The Wheel Deal red.png" />
+                    <div className="col-sm p-2 logo-box w-50" style={{ marginLeft: '5px' }} >
+                        <img style={{ width: '10rem', height: '5rem', objectFit: 'cover' }} src="/The Wheel Deal red.png" alt="The Wheel Deal Logo" />
                     </div>
 
                     <div className="col-4 justify-content-center">
@@ -47,8 +47,7 @@ class Navbar extends Component {
                                         >Download</Button>
                                     </li>
                                     <li className="nav-item p-2">
-                                        <Button 
-
+                                        <Button
                                             color='error'
                                             variant='text'
 
