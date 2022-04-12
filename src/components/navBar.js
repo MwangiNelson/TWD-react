@@ -37,7 +37,7 @@ const Navbar = () => {
               <ul className="navbar-nav w-100 justify-content-end">
                 <li className="nav-item p-2">
                   <CommonButton 
-                    variant="text"
+                    variant="outlined"
                     color='error'
                     sx={myStyle}
                     >
@@ -46,7 +46,7 @@ const Navbar = () => {
                   </CommonButton>
                 </li>
                 <li className="nav-item p-2">
-                  <CommonButton sx={myStyle} variant="outlined" color="error">
+                  <CommonButton sx={myStyle} variant="text" color="error">
                     Download
                   </CommonButton>
                 </li>

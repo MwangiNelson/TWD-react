@@ -23,6 +23,15 @@ const Body = () => {
             'sans-serif'
         ].join(',')
     }
+
+    const textfontStyle = {
+        '&:label': {
+            fontFamily: [
+                'Barlow Condensed',
+                'sans-serif'
+            ].join(',')
+        }
+    }
     return (
         <div className="main-body w-100" style={styles}>
 
@@ -46,11 +55,14 @@ const Body = () => {
 
             <div className="input-group w-100 justify-content-center" style={{ textAlign: 'center' }}>
 
-                <CommonTF
+                <TextField
                     variant='outlined'
                     color='error'
                     label='Find ride'
-                    sx={myStyle}
+                    sx={{
+                        label: ['Barlow Condensed',
+                            'sans-serif'].join(',')
+                    }}
                 />
 
 
