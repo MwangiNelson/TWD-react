@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,useState } from "react";
 import "../body.css";
 import { Button } from "@mui/material";
 import CommonButton from "./space.style";
@@ -6,13 +6,17 @@ import {
   HomeRounded,
   AccountCircleRounded,
   MenuSharp,
-  SortSharp,
+  ArrowDownwardOutlined,
 } from "@material-ui/icons";
+
 
 const Navbar = () => {
   const myStyle = {
     fontFamily: ["Barlow Condensed", "sans-serif"].join(","),
   };
+
+  function loginOpen() {}
+
 
   return (
     <nav
@@ -22,6 +26,7 @@ const Navbar = () => {
         fontFamily: ["Barlow Condensed", "sans-serif"].join(","),
       }}
     >
+     
       <div className="row justify-content-between nav p-0 body-head">
         <div className="col-sm p-2 logo-box w-50" style={{ marginLeft: "5px" }}>
           <img
@@ -36,22 +41,22 @@ const Navbar = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav w-100 justify-content-end">
                 <li className="nav-item p-2">
-                  <CommonButton 
-                    variant="outlined"
-                    color='error'
-                    sx={myStyle}
-                    >
+                  <CommonButton variant="outlined" color="error" sx={myStyle}>
                     <HomeRounded />
-                    Login
+                    Home
                   </CommonButton>
                 </li>
                 <li className="nav-item p-2">
-                  <CommonButton sx={myStyle} variant="text" color="error">
+                  <CommonButton sx={myStyle} variant="contained" color="error">
                     Download
                   </CommonButton>
                 </li>
                 <li className="nav-item p-2">
-                  <CommonButton color="error" variant="text" sx={myStyle}>
+                  <CommonButton
+                    color="error"
+                    variant="text"
+                    sx={myStyle}
+                  >
                     <AccountCircleRounded />
                     Login
                   </CommonButton>
