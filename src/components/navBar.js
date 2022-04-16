@@ -1,6 +1,7 @@
 import React, { Component,useState } from "react";
 import "../body.css";
 import { Button } from "@mui/material";
+import LoginForm from "./login";
 import CommonButton from "./space.style";
 import {
   HomeRounded,
@@ -26,7 +27,8 @@ const Navbar = () => {
         fontFamily: ["Barlow Condensed", "sans-serif"].join(","),
       }}
     >
-     
+     <LoginForm />
+
       <div className="row justify-content-between nav p-0 body-head">
         <div className="col-sm p-2 logo-box w-50" style={{ marginLeft: "5px" }}>
           <img

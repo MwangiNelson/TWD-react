@@ -4,11 +4,11 @@ import CommonButton from "./space.style";
 
 function LoginForm() {
   const bg = {
-    backgroundColor: "#FFFDD0",
+    backgroundColor: "#fff",
     position: "fixed",
-    borderRadius: "10px",
-    border: "1px solid black",
+    borderRadius: "0 0 0px 10px",
     height: "max-content",
+    right:'0',
     width: "30rem",
     textAlign: "center",
     top:'5rem',
@@ -28,7 +28,7 @@ function LoginForm() {
   };
 
   return (
-    <div className="container-sm mt-4" style={bg}>
+    <div className="container-sm mt-3" style={bg}>
       <div className="row p-4" style={myStyle}>
         <h2>sign in</h2>
       </div>
