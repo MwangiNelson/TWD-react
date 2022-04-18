@@ -15,11 +15,26 @@
   position: relative;
   bottom: 0;
 }
-.home-nav{
+.home-nav {
   position: fixed;
   top: 0;
   border-bottom: 1px solid black;
 }
-.centerBtn{
+.centerBtn {
   font-family: "Barlow Condensed", sans-serif;
+}
+
+
+.list{
+  display:flex;
+  flex-direction: column;
+  list-style: none;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  transition: height 2s, transform 2s;
+}
+.list li{
+  width: 100%;
+  padding: 0.5rem;
 }
