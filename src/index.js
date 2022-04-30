@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Body from './components/body';
 import 'bootstrap/dist/css/bootstrap.css';
+import { LoginForm } from './components/loginForm';
 import 'font-awesome/css/font-awesome.css';
 import '@fortawesome/fontawesome-svg-core';
 import reportWebVitals from './reportWebVitals';
@@ -12,7 +13,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
 
-    <Body />
+   <App />
 
  
   </React.StrictMode>,

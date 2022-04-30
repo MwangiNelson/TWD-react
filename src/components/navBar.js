@@ -1,6 +1,8 @@
 import React, { Component, useState } from "react";
 import "../body.css";
 import { Button } from "@mui/material";
+import { MenuItems } from "./menuItems"
+import { LoginForm } from "./loginForm";
 import CommonButton from "./space.style";
 import {
   HomeRounded,
@@ -18,8 +20,8 @@ const Navbar = () => {
     fontFamily: ["Barlow Condensed", "sans-serif"].join(","),
     width: '100%',
     padding: '10px',
-    letterSpacing:'.5rem',
-    fontWeight:'bold'
+    letterSpacing: '.5rem',
+    fontWeight: 'bold'
   }
 
   const state = {
@@ -28,11 +30,16 @@ const Navbar = () => {
 
   const [show, setShow] = useState(false)
 
+  const[showLogin, setShowLogin] = useState(false)
 
-  function setNewName(){
-
+  const toggleLogin =()=>{
+    setShowLogin(!showLogin);
   }
 
+  const toggleOptions=()=>{
+    setShow(!show)
+    setShowLogin(!showLogin)
+  }
 
 
   return (
@@ -44,7 +51,7 @@ const Navbar = () => {
       }}
 
     >
-      {/* <LoginForm /> */}
+      <LoginForm showLogin={showLogin} setShowLogin={setShowLogin} />
 
       <div className="row justify-content-between nav p-0 body-head">
         <div className="col-sm p-2 logo-box w-50" style={{ marginLeft: "5px" }}>
@@ -62,6 +69,10 @@ const Navbar = () => {
               id="navbarNav"
             >
               <ul className="navbar-nav w-100 justify-content-end">
+              
+
+
+
                 <li className="nav-item p-2">
                   <CommonButton variant="outlined" color="error" sx={myStyle}>
                     <HomeRounded />
@@ -74,11 +85,12 @@ const Navbar = () => {
                   </CommonButton>
                 </li>
                 <li className="nav-item p-2">
-                  <CommonButton color="error" variant="text" sx={myStyle}>
+                  <CommonButton  color="error" variant="text" sx={myStyle} onClick={toggleLogin}>
                     <AccountCircleRounded />
                     Login
                   </CommonButton>
                 </li>
+              
               </ul>
             </div>
             <span
@@ -91,9 +103,9 @@ const Navbar = () => {
             >
               <Button variant="contained" color="error" onClick={() => setShow(!show)}>
                 {
-                  show? <CloseRounded /> : <MenuSharp />
+                  show ? <CloseRounded /> : <MenuSharp />
                 }
-              
+
               </Button>
             </span>
           </div>
@@ -113,8 +125,8 @@ const Navbar = () => {
                 </CommonButton>
               </li>
               <li className="list-items">
-                <CommonButton color="error" variant="contained" sx={mobileView}>
-               
+                <CommonButton color="error" variant="contained" sx={mobileView} onClick={toggleOptions}>
+
                   Login
                 </CommonButton>
               </li>

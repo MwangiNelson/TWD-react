@@ -1,9 +1,5 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { Component } from 'react';
 import '../body.css'
-import Navbar from './navBar'
-import { Button, TextField } from '@mui/material';
-import CommonButton from './space.style';
-import CommonTF from "./tf.style";
 import { SearchRounded, ArrowDownwardRounded } from '@material-ui/icons';
 
 const Body = () => {
@@ -40,15 +36,13 @@ const Body = () => {
         }
     }
 
-  
+
 
     return (
 
         <div className="entireBody">
-            <Navbar />
-
             <div className="main-body w-100" style={styles}>
-                
+
 
 
                 <div className="container body" style={{ padding: '5rem' }}>
@@ -58,34 +52,19 @@ const Body = () => {
                 </div>
 
                 <div className="justify-content-center m-4 p-4" style={{ textAlign: 'center' }} >
-                    <CommonButton
-                        variant='contained'
-                        color='error'
-                        sx={myStyle}
-
-                    >RENT A RIDE.</CommonButton>
+                    <button className="btn btn-danger">
+                        RENT A RIDE
+                    </button>
                 </div>
 
 
 
                 <div className="input-group w-100 justify-content-center" style={{ textAlign: 'center' }}>
 
-                    <TextField
-                        variant='outlined'
-                        color='error'
-                        label='Find ride'
-                        sx={inputStyle}
-
-                    />
+                   
 
 
-                    <CommonButton
-                        variant='contained'
-                        color='error'
-                        sx={myStyle}
-                    >
-                        <SearchRounded />
-                    </CommonButton>
+                
                 </div>
 
 

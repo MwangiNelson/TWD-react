@@ -1,0 +1,23 @@
+.rearBackground {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.363);
+  padding-top: 10rem;
+  position: fixed;
+}
+.mainForm {
+  background-color: white;
+  color: red;
+  text-align: center;
+}
+.loginForm {
+  display: flex;
+  flex-direction: row;
+}
+.exit {
+  justify-content: end;
+  
+}
+.exit button{
+    border-radius: 2px;
+}
