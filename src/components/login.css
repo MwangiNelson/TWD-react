@@ -16,8 +16,13 @@
 }
 .exit {
   justify-content: end;
-  
 }
-.exit button{
-    border-radius: 2px;
+
+.exit button {
+  border-radius: 2px;
+}
+@media only screen and(max-width:500px) {
+  .whiteField {
+    border-radius: none;
+  }
 }

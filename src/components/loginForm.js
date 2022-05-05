@@ -1,7 +1,7 @@
 import React, {useRef} from 'react';
 import { Button, TextField, Grid } from '@material-ui/core';
 import { CloseSharp } from '@material-ui/icons';
-import './login.css'
+import './login.css';
 import CommonButton from "./space.style";
 
 
@@ -11,7 +11,6 @@ export const LoginForm = ({ showLogin, setShowLogin }) => {
     }
     const bg = {
         backgroundColor: "#fff",
-        borderRadius: "10px",
         height: "max-content",
         width: "30rem",
         textAlign: "center",
@@ -45,7 +44,7 @@ export const LoginForm = ({ showLogin, setShowLogin }) => {
         {
             showLogin ?
                 <div className="rearBackground" ref={modalRef} onClick={closeModal}>
-                    <div className="container-sm mt-3" style={bg}>
+                    <div className="whiteField container-sm mt-3" style={bg}>
                         <div className="row exit">
                             <button className="btn btn-danger" style={{ width: "50px" }} onClick={() => {
                                 setShowLogin(!showLogin);
